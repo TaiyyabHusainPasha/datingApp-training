@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp\\API\\API.csproj": {}
+    "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp\\API\\API.csproj": {
+    "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\API.csproj",
         "packagesPath": "C:\\Users\\taiyya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
               "version": "[9.0.5, )"
@@ -58,6 +62,14 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.11.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.11.0, )"
             }
           },
           "imports": [
