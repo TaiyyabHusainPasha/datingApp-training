@@ -15,9 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Extensions\" />
     <Folder Include="interfaces\" />
+    <Folder Include="Middleware\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
