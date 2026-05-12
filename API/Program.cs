@@ -1,5 +1,6 @@
 using System.Text;
 using API.Data;
+using API.Helpers;
 using API.interfaces;
 using API.Middleware;
 using API.Services;
@@ -18,7 +19,10 @@ builder.Services.AddDbContext<AppDbContext>(ops =>
 });
 builder.Services.AddCors();
 builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+builder.Services.Configure<CloudnarySettings>(builder.Configuration
+                .GetSection("CloudnarySettings"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {

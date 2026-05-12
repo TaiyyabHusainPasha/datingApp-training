@@ -9,18 +9,18 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
 {
     public async Task<Member?> GetMemberByIdAsync(string id)
     {
-        return await  context.Members.FindAsync(id);
+        return await context.Members.FindAsync(id);
     }
 
     public async Task<IReadOnlyList<Member>> GetMembersAsync()
     {
-        return await  context.Members.ToListAsync();
+        return await context.Members.ToListAsync();
     }
 
     public async Task<IReadOnlyList<Photo>> GetPhotosByMemberAsync(string memberId)
     {
         return await context.Members
-                .Where(x =>x.Id == memberId)
+                .Where(x => x.Id == memberId)
                 .SelectMany(x => x.Photos)
                 .ToListAsync();
     }
@@ -28,11 +28,21 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
     public async Task<bool> SaveAllAsync()
     {
         return await context.SaveChangesAsync() > 0;
-
     }
 
     public void Update(Member member)
     {
         context.Entry(member).State = EntityState.Modified;
     }
+
+    public async Task<Member> GetMemberForUpdate(string id)
+    {
+        #pragma warning disable CS8603 // Possible null reference return.
+        return await context.Members
+                .Include(x => x.User)
+                .Include(x => x.Photos)
+                .SingleOrDefaultAsync(x => x.Id == id);
+        #pragma warning restore CS8603 // Possible null reference return.
+    }
+
 }
