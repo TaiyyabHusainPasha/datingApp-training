@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bI7xYwv6OuY=",
+  "dgSpecHash": "wyJPwkcrouU=",
   "success": true,
   "projectFilePath": "C:\\Users\\taiyya\\Downloads\\Husain\\Learning\\LearningWithNeil\\DatingApp-Training\\datingApp-training\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -115,7 +115,19 @@
     "C:\\Users\\taiyya\\.nuget\\packages\\system.text.regularexpressions\\4.3.1\\system.text.regularexpressions.4.3.1.nupkg.sha512",
     "C:\\Users\\taiyya\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\taiyya\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\taiyya\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\taiyya\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\taiyya\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.118\\microsoft.net.sdk.compilers.toolset.9.0.118.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

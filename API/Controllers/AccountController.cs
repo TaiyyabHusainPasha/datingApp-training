@@ -126,4 +126,21 @@ public class AccountController : BaseApiController
         Response.Cookies.Append("refreshToken", refershToken, cookieOptions);
     }
 
+    [Authorize]
+    [HttpPost("logout")]
+    public async Task<ActionResult> LogOut()
+    {
+        await _userManager.Users
+            .Where(x => x.Id == User.GetMemberId())
+            .ExecuteUpdateAsync(setters => setters
+                .SetProperty(x => x.RefreshToken, _ => null)
+                .SetProperty(x => x.RefreshTokenExpiry, _ => null)
+                );
+
+        Response.Cookies.Delete("refreshToken");
+
+        return Ok();
+
+    }
+
 }

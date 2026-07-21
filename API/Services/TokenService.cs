@@ -24,15 +24,15 @@ public class TokenService(IConfiguration config, UserManager<AppUser> userManage
             new Claim(ClaimTypes.Email, user.Email!),
             new Claim(ClaimTypes.NameIdentifier, user.Id)
         };
-        Console.WriteLine("check user:", user);
+        //Console.WriteLine("check user:", user);
 
         var roles = await userManager.GetRolesAsync(user);
-        Console.WriteLine("check roles:", roles);
+        //Console.WriteLine("check roles:", roles);
 
 
         claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
-        Console.WriteLine("check roles:", roles);
+        //Console.WriteLine("check roles:", roles);
 
 
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
